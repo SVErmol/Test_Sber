@@ -1,0 +1,266 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #786A6A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+.menu {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    /* text-align: justify; */
+    width: 45%;
+  }
+
+
+  .menu_link {
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    /* margin: 0 7px; */
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s linear;
+    
+  }
+  
+  .menu_link:hover {
+    color: black;
+    cursor: pointer;
+  }
+
+i{
+    width: auto;
+}
+.first_block{
+   
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url(img/first_block.jpg);
+margin: 4%;
+height: 456px;
+overflow: hidden;
+border-radius: 40px;
+background-size: 100%;
+background-position: 0 50%;
+
+}
+.first_block-description{
+    color: white;
+    font-size: 26px;
+    line-height: 34px;
+    padding: 0 5%;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.caption{
+    font-size: 56px;
+    line-height: 68px;
+text-align: center;
+text-transform: uppercase;
+font-weight: 600;
+margin: 1% 0;
+
+}
+
+.about_description{
+    display: flex;
+flex-wrap: wrap;
+align-items: center;
+}
+.about{
+    background: #786A6A;
+    padding: 1% 5%;
+}
+.about_card{
+    display: flex;
+flex-direction: column;
+align-items: center;
+width: 45%;
+padding: 0% 1%;
+margin: 1% 0;
+
+}
+.card_description{
+    font-weight: 600;
+font-size: 20px;
+line-height: 26px;
+
+text-align: center;
+
+color: #FFFFFF;
+margin: 1% 0;
+}
+.price_block{
+    display: flex;
+flex-direction: row;
+}
+.card img{
+    width: 100%;
+    border-radius: 40px;
+    height: 507px;
+}
+.card{
+    width: 30%;
+    margin: 0 3%;
+}
+.name,.card_price{
+    font-weight: 700;
+font-size: 16px;
+line-height: 34px;
+
+text-align: center;
+text-transform: uppercase;
+}
+.price_description{
+    font-weight: 400;
+font-size: 14px;
+line-height: 34px;
+text-align: center;
+text-transform: uppercase;
+}
+ button{
+    width: 100%;
+    background: #666373;
+border: 1px solid #666373;
+border-radius: 5px;
+color:#FFFFFF;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+padding: 3% 0;
+transition: background 0.5s linear;
+
+
+text-align: center;
+}
+
+
+.contacts_block{
+    display: flex;
+flex-direction: row;
+align-items: center;
+margin: 2% 3%;
+
+
+}
+.contact_header{
+    font-weight: 700;
+font-size: 20px;
+line-height: 34px;
+margin: 0;
+
+text-transform: uppercase;
+
+}
+.contact_description{
+    font-weight: 400;
+font-size: 20px;
+line-height: 34px;
+margin: 0;
+text-transform: uppercase;
+}
+
+.contacts_block_description{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin: 0 3%;
+width: 75%;
+}
+.social{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+gap: 10%;
+
+}
+.form_header{
+    font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+}
+form button{
+width: 50%;
+padding: 2% 0;}
+
+input{
+    width: 100%;
+    border: 1px solid #3C3C3C;
+border-radius: 4px;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+margin: 3% 0;
+
+}
+button:hover{
+    background: #32303d;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+flex-direction: row;
+align-items: center;
+background: #786A6A;
+gap: 5%;
+padding: 1% 10%;
+}
+.footer_block
+{
+    color: #FFFFFF;
+
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.footer_block a{
+    color: white;
+    font-weight: 700;
+font-size: 18px;
+line-height: 34px;
+text-decoration: none;
+text-transform: uppercase;
+}
+.footer_block a:hover{
+    color: black;
+}
+
+.slide {
+    width:300px;
+    height:200px;
+    /* background:#444; */
+    color:#FFF;
+    margin:10px;
+    border-radius:10px;
+    text-align:center;
+    font-size:34px;
+    font-weight:bold;
+    padding:50px;
+  }
+  .stars {
+      color:yellow;
+  }
+  .slick-slide {
+        margin: 0 10px;
+  }
+  .portfolio img{
+      border-radius: 40px;
+      width: 360px;
+      height: 515px;
+  }
+  .portfolio{
+      margin: 0 5%;
+  }
+
+  .container{
+    max-width: 1440px;
+    margin: auto;
+    height: 1000px;
+  }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoss</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="img/logo.png" height="85px" alt=""></div>
+        <div class="menu">
+            <a class="menu_link" href="#portfolio">Портфолио</a>
+            <a class="menu_link" href="#about">О нас</a>
+            <a class="menu_link" href="#price">Прайс</a>
+            <a class="menu_link" href="#contacts">Контакты</a>
+
+        </div>
+    </header>
+    <div class="container">
+    <div class="first_block">
+
+        <p class="first_block-description">
+            Мы — два фотографа, которые сошлись на том, что съемка одновременно на 2 объектива упрощает процесс.
+            Некоторых смущает, что фотосессия проходит с двумя фотографами, у кого-то возникают вопросы. Но не стоит
+            стесняться и переживать, ведь самая лучшая съемка — та, в основе которой лежит искренность.
+        </p>
+    </div>
+    <div class="portfolio" id="portfolio">
+        <p class="caption">Портфолио</p>
+        <div class='slider-multi'>
+            <div class='slide slide-1'>
+                <img src="img/slide1.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide2.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide3.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide4.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide5.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide6.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide7.jpg" alt="">
+            </div>
+            <div class='slide slide-1'>
+                <img src="img/slide8.jpg" alt="">
+            </div>
+         
+          
+          
+
+        </div>
+    </div>
+
+
+
+
+    <div class="about" id="about">
+        <p class="caption">О нас</p>
+        <div class="about_description" id="about">
+            <div class="about_card" v-for="description in descriptions">
+                <img src="img/Camera.png" alt="">
+                <div class="card_description">
+                    {{description}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="price" id="price">
+
+        <p class="caption">Прайс</p>
+
+        <div class="price_block" id="price">
+
+            <div class="card" v-for="photoshoot in photoshoots">
+                <img v-bind:src="photoshoot.src" alt="">
+                <p class="name">{{photoshoot.name}}</p>
+                <p class="card_price">{{photoshoot.cost}} Руб/час</p>
+                <div class="price_description">
+                    <p>{{photoshoot.condition1}}</p>
+                    <p>{{photoshoot.condition2}} </p>
+                    <div id="app-2">
+                        <span v-bind:title="message">
+                            {{photoshoot.condition3}}
+                        </span>
+                    </div>
+                    <p>{{photoshoot.condition4}}</p>
+                    <p>{{photoshoot.condition5}} </p>
+                    <p>{{photoshoot.condition6}}</p>
+                </div>
+                <!-- <button>Забронировать</button> -->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="contacts" id="contacts">
+        <p class="caption">Контакты</p>
+        <div class="contacts_block">
+            <div class="contacts_block_description">
+                <p class="contact_header">Адрес:</p>
+                <p class="contact_description">г. Иркутск, ул Ленина 153</p>
+                <p class="contact_header">Номер телефона:</p>
+                <p class="contact_description">89041101750</p>
+                <p class="contact_header">Электронная почта:</p>
+                <p class="contact_description">sv.ermolaeva@yandex.ru</p>
+                <p class="contact_header">Социальнык сети:</p>
+                <div class="social">
+
+                    <a href="#" style="color: #0077FF;"> <i class="fa-2x fab fa-vk"></i></a>
+                    <a href="#" style="color: #27A6E5;"> <i class="fa-2x fab fa-telegram"></i></a>
+
+                </div>
+                <p class="form_header">Остались вопросы? Хотите попасть на съемку?</p>
+                <form>
+                    <input type="text" class="form-control " placeholder="Ваше имя*" required>
+
+
+                    <input type="tel" class="form-control" required placeholder="Ваш телефон*">
+
+
+
+                    <button type="submit" class="btn btn-danger text-uppercase ">Отправить</button>
+                </form>
+
+            </div>
+
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8db2cb19d3a93d4a8e770deca88c1f498017a7959b3c3149a2526d7143f0adab&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+
+
+
+
+        </div>
+    </div>
+        <footer>
+            <img src="img/logo.png" width="210px">
+            <div class="footer_block">
+                <a href="#portfolio">Порфтолио</a>
+                <a href="##about">О нас</a>
+                <a href="#price">Прайс</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+            <div class="footer_block">
+                <p class="contact_header">Адрес:</p>
+                <p class="contact_description">г. Иркутск, ул Ленина 153</p>
+                <p class="contact_header">Номер телефона:</p>
+                <p class="contact_description">89041101750</p>
+            </div>
+            <div class="footer_block">
+                <p class="contact_header">Электронная почта:</p>
+                <p class="contact_description">sv.ermolaeva@yandex.ru</p>
+                <p class="contact_header">Социальнык сети:</p>
+                <div class="social">
+
+                    <a href="#" style="color: #0077FF;"> <i class="fa-2x fab fa-vk"></i></a>
+                    <a href="#" style="color: #27A6E5;"> <i class="fa-2x fab fa-telegram"></i></a>
+
+                </div>
+            </div>
+        </footer>
+
+</body>
+<script src="script.js"></script>
+<script src="slick/slick.min.js"></script>
+
+
+</html>
